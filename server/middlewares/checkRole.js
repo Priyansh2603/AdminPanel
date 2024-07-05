@@ -1,7 +1,7 @@
-import User from "../model/userAuth";
-export const checkRole = (req,res,next)=>{
+import User from "../model/userAuth.js";
+export const checkRole = async(req,res,next)=>{
     try{
-        const user = User.findOne({_id:req.user.id});
+        const user = await User.findById(req.user.id);
         if(user.role==='Admin'){
             next();
         }

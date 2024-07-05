@@ -12,7 +12,7 @@ export default function Home() {
       
       const token = Cookies.get('user');
       console.log("token",token);
-        const {data} = await axios.post("http://localhost:8000/auth/getUser",{
+        const {data} = await axios.post("http://localhost:8000/auth/getUser",{},{
             headers: {
                 Authorization: `Bearer ${token}`,
               }

@@ -103,18 +103,20 @@ export const getAllUsers = async(req, res)=> {
         const { searchString } = req.body;
     
         if (!searchString) {
-          return res.status(400).json({ msg: 'Search string is required' });
+          const users = await User.find();
+          return res.status(400).json(users);
         }
     
         const query = {
           $or: [
-            { name: { $regex: searchString, $options: 'i' } },
+            { firstname: { $regex: searchString, $options: 'i' } },
             { email: { $regex: searchString, $options: 'i' } },
             // Add more fields as needed
           ]
         };
     
         const users = await User.find(query);
+        console.log(users);
         res.status(200).json(users);
       } catch (err) {
         console.error(err);

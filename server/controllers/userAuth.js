@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 const saltRounds = 10;
 export const authRegister = async(req,res)=>{
     console.log('Received!')
-      const {name,lastname,email,password} = req.body;
+      const {name,lastname,email,password} =  req.body;
       try{
           const user = await User.findOne({email:email});
           if(user){

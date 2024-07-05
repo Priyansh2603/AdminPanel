@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div>
       <Navbar/>
-      <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>Welcome {userInfo.name}</div>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'center',py:'10px'}}><h1>Welcome {userInfo.name}</h1></div>
       <MultiActionAreaCard/>
       <MultiActionAreaCard/>
     </div>

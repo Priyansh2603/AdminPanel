@@ -7,4 +7,8 @@ Following are the few steps to run this Admin Panel
 6. for Admin login the credentials are email : admin@xcelore.com and password Xcelore@2024
 7. admin is directed to Admin panel after login/signup and user is directed to Home page
 8. Here admin can do the crud operations
+9. these are the values in .env file :
+ PORT = 8000
+MONGODB_URI
+JWT_SECRET 
 

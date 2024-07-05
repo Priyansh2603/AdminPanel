@@ -78,7 +78,7 @@ export default function Register() {
   return (
     <>
       <ThemeProvider theme={theme} style={{ marginTop: "5vh" }}>
-        <Container component="main" maxWidth="xs">
+        <Container component="main" maxWidth="xs"  style={{backgroundColor:'#efefef'}}>
           <CssBaseline />
           <Box
             sx={{
